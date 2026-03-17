@@ -4,184 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>亚马逊宠物用品 竞品情报日报 · 2026-03-17</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#c0392b; --red-l:#fdf2f1;
-  --blue:#2980b9; --blue-l:#eaf4fb;
-  --green:#27ae60; --orange:#d68910;
-  --black:#1a1a1a; --g3:#333; --g6:#666; --g9:#999;
-  --bd:#e0e0e0; --bg:#f2f1ee; --wh:#fff;
+  --primary:#0f4c81;
+  --primary-light:#1a6fa3;
+  --accent:#00b4d8;
+  --warm:#f77f00;
+  --bg:#f0f4f8;
+  --card:#ffffff;
+  --text:#1e293b;
+  --text-muted:#64748b;
+  --border:#e2e8f0;
+  --success:#10b981;
+  --danger:#ef4444;
+  --warning:#f59e0b;
+  --shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1);
+  --radius:12px;
+  --radius-sm:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--g3);font-size:14px;line-height:1.7}
+body{font-family:'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7}
 
 /* ── HEADER ── */
-.hdr{background:var(--black);color:#fff}
-.hdr-top{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;flex-wrap:wrap;gap:8px}
-.hdr-top h1{font-family:'Noto Serif SC',serif;font-size:18px;letter-spacing:1px}
-.hdr-top .meta{font-size:11px;color:#aaa;margin-top:3px}
-.badge{background:var(--red);padding:3px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+.hdr{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:0;top:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 0%,rgba(255,255,255,0.05) 100%);pointer-events:none}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;position:relative;z-index:1}
+.hdr-top h1{font-size:22px;font-weight:700;letter-spacing:-0.5px;display:flex;align-items:center;gap:12px}
+.hdr-top .meta{font-size:12px;color:rgba(255,255,255,0.7);margin-top:6px}
+.badge{background:var(--warm);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;box-shadow:0 2px 8px rgba(247,127,0,0.3)}
 
 /* ── QUICK BAR ── */
-.quick-bar{background:#222;padding:8px 24px;overflow-x:auto;white-space:nowrap;display:flex;gap:32px;font-size:12px}
-.qi{display:inline-flex;align-items:center;gap:6px}
-.ql{color:#777}.qv{color:#fff;font-weight:700}
-.up{color:#2ecc71}.dn{color:#e74c3c}
+.quick-bar{background:var(--accent);padding:12px 28px;overflow-x:auto;white-space:nowrap;display:flex;gap:40px;font-size:13px;position:relative}
+.quick-bar::after{content:'';position:absolute;right:0;top:0;width:60px;height:100%;background:linear-gradient(90deg,transparent,var(--accent));pointer-events:none}
+.qi{display:inline-flex;align-items:center;gap:8px}
+.ql{color:rgba(255,255,255,0.8);font-weight:500}.qv{color:#fff;font-weight:700}
+.up{color:#86efac}.dn{color:#fca5a5}
 
 /* ── TABS ── */
-.tab-nav{display:flex;background:#1a1a1a;padding:0 24px;border-top:1px solid #333;overflow-x:auto}
-.tab-btn{padding:12px 18px;border:none;background:none;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:500;color:#aaa;border-bottom:3px solid transparent;transition:.2s;white-space:nowrap}
-.tab-btn:hover{color:#fff}
-.tab-btn.on{color:#fff;border-bottom-color:var(--red)}
+.tab-nav{display:flex;padding:20px 28px 0;gap:12px;background:transparent;overflow-x:auto}
+.tab-btn{padding:10px 20px;border:none;background:#fff;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:var(--text-muted);border-radius:30px;transition:all .2s;white-space:nowrap;box-shadow:var(--shadow)}
+.tab-btn:hover{background:#f8fafc;transform:translateY(-1px)}
+.tab-btn.on{background:var(--primary);color:#fff;box-shadow:0 4px 12px rgba(15,76,129,0.3)}
 
 /* ── PANELS ── */
-.tab-panel{display:none}
+.tab-panel{display:none;padding:24px 28px}
 .tab-panel.on{display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:24px 16px;display:grid;grid-template-columns:1fr 280px;gap:20px}
-@media(max-width:900px){.wrap{grid-template-columns:1fr}.sidebar{order:-1}}
+.wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:24px}
+@media(max-width:1024px){.wrap{grid-template-columns:1fr}.sidebar{order:-1}}
 
 /* ── CARDS ── */
-.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
-@media(max-width:600px){.signals{grid-template-columns:1fr}}
-.sc{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:14px 16px}
-.sl{font-size:10px;text-transform:uppercase;color:var(--g9);letter-spacing:.5px;margin-bottom:5px}
-.sv{font-size:22px;font-weight:700;font-family:'Noto Serif SC',serif}
-.sv.up{color:var(--green)}.sv.dn{color:var(--red)}.sv.bl{color:var(--blue)}
-.sd{font-size:11px;color:var(--g9);margin-top:3px}
+.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:768px){.signals{grid-template-columns:1fr}}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.sc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+.sc:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.sc:nth-child(2)::before{background:var(--success)}
+.sc:nth-child(3)::before{background:var(--warm)}
+.sl{font-size:11px;text-transform:uppercase;color:var(--text-muted);letter-spacing:0.5px;font-weight:600;margin-bottom:8px}
+.sv{font-size:26px;font-weight:700;color:var(--primary)}
+.sv.up{color:var(--success)}.sv.dn{color:var(--danger)}.sv.bl{color:var(--accent)}
+.sd{font-size:12px;color:var(--text-muted);margin-top:6px}
 
 /* ── SECTION TITLE ── */
-.st{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;border-left:3px solid var(--red);padding-left:10px;margin:24px 0 14px;color:var(--black)}
-.st:first-child{margin-top:0}
+.st{font-size:16px;font-weight:700;color:var(--text);margin:28px 0 16px;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;padding:10px 18px;border-radius:var(--radius-sm);box-shadow:var(--shadow)}
+.st::before{content:'●';font-size:8px;color:var(--accent)}
 
 /* ── EDITORIAL ── */
-.ed{background:var(--red-l);border-left:4px solid var(--red);padding:14px 16px;border-radius:0 6px 6px 0;font-size:13px;line-height:1.85;margin-bottom:22px}
+.ed{background:linear-gradient(135deg,rgba(0,180,216,0.08) 0%,rgba(15,76,129,0.05) 100%);border-left:4px solid var(--accent);padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;font-size:14px;line-height:1.9;margin-bottom:24px;box-shadow:var(--shadow)}
 
-/* ── ALERT ── */
-.disc{background:#fffde7;border:1px solid #ffe082;border-radius:6px;padding:11px 14px;font-size:12px;color:#7a6500;margin-bottom:20px}
+/* ── DISC ── */
+.disc{background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:1px solid #f59e0b;border-radius:var(--radius);padding:14px 18px;font-size:13px;color:#92400e;margin-bottom:20px;display:flex;align-items:flex-start;gap:12px}
+.disc::before{content:'⚠️';font-size:16px}
 
 /* ── NEWS ITEMS ── */
-.ni{border-bottom:1px solid var(--bd);padding:14px 0}
+.ni{border-bottom:1px solid var(--border);padding:18px 0}
 .ni:last-child{border-bottom:none}
-.nm{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
-.t2{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;text-transform:uppercase}
-.hot{background:#fde8e8;color:var(--red)}
-.mkt{background:#e8f4fd;color:var(--blue)}
-.prd{background:#e8f8ee;color:var(--green)}
-.pol{background:#fff3e0;color:var(--orange)}
-.itl{background:#f3e8fd;color:#8e44ad}
-.src{font-size:11px;color:var(--g9)}
-.nt{font-size:14px;font-weight:700;margin-bottom:5px}
-.nt a{color:var(--black);text-decoration:none}
-.nt a:hover{color:var(--red);text-decoration:underline}
-.nb{font-size:13px;color:var(--g6);line-height:1.7}
+.nm{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.t2{display:inline-block;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+.hot{background:linear-gradient(135deg,#fee2e2 0%,#fecaca 100%);color:var(--danger);border:1px solid #fca5a5}
+.mkt{background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);color:#2563eb;border:1px solid #93c5fd}
+.prd{background:linear-gradient(135deg,#d1fae5 0%,#a7f3d0 100%);color:var(--success);border:1px solid #6ee7b7}
+.pol{background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);color:#d97706;border:1px solid #fcd34d}
+.itl{background:linear-gradient(135deg,#f3e8ff 0%,#e9d5ff 100%);color:#7c3aed;border:1px solid #c4b5fd}
+.src{font-size:11px;color:var(--text-muted);background:var(--bg);padding:3px 10px;border-radius:20px}
+.nt{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.nt a{color:var(--primary);text-decoration:none}.nt a:hover{color:var(--accent);text-decoration:underline}
+.nb{font-size:14px;color:var(--text-muted);line-height:1.8}
 
 /* ── COMP CARDS ── */
-.cg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
-@media(max-width:700px){.cg{grid-template-columns:1fr}}
-.cc{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:18px}
-.cc .bn{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;color:var(--red);margin-bottom:5px}
-.cc .bs{font-size:11px;color:var(--g9);margin-bottom:12px}
-.cc .mr{display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap}
-.cc .mc{background:var(--bg);border-radius:4px;padding:6px 10px;font-size:12px;flex:1;min-width:76px}
-.cc .mc .ml{color:var(--g9);font-size:10px}
-.cc .mc .mv{font-weight:700;font-size:14px}
-.cc .ins{font-size:12px;color:var(--g6);border-top:1px dashed var(--bd);padding-top:10px;margin-top:8px;line-height:1.65}
-.cc .hl{color:var(--red);font-weight:700}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+@media(max-width:768px){.cg{grid-template-columns:1fr}}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:all .2s}
+.cc:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.cc .bn{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.cc .bs{font-size:12px;color:var(--text-muted);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.cc .mr{display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.cc .mc{background:linear-gradient(135deg,var(--bg) 0%,#fff 100%);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;font-size:12px;flex:1;min-width:80px;text-align:center}
+.cc .mc .ml{color:var(--text-muted);font-size:10px;text-transform:uppercase;letter-spacing:0.5px}.cc .mc .mv{font-weight:700;font-size:15px;color:var(--primary)}
+.cc .ins{font-size:13px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:14px;margin-top:12px;line-height:1.8}
+.cc .hl{color:var(--warm);font-weight:700}
 
 /* ── TABLE ── */
-.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px}
-.tbl th{background:var(--black);color:#fff;padding:10px 12px;text-align:left;font-size:12px;font-weight:500}
-.tbl td{padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
-.tbl tr:nth-child(even) td{background:#fafafa}
-.tbl .own{color:var(--green);font-weight:700}
-.tbl .comp{color:var(--red)}
-.tbl .dr{color:var(--g9)}
-.tbl a{color:var(--blue);text-decoration:none}
-.tbl a:hover{text-decoration:underline}
-.tag-up{color:var(--green);font-weight:700}
-.tag-dn{color:var(--red);font-weight:700}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;margin-bottom:24px;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.tbl th{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;padding:14px 16px;text-align:left;font-size:12px;font-weight:600;letter-spacing:0.3px}
+.tbl td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:#f8fafc}
+.tbl .own{color:var(--success);font-weight:700}.tbl .comp{color:var(--danger)}.tbl .dr{color:var(--text-muted)}
+.tbl a{color:var(--primary);text-decoration:none}.tbl a:hover{text-decoration:underline}
+.tag-up{color:var(--success);font-weight:700}.tag-dn{color:var(--danger);font-weight:700}
 
 /* ── PSYCH BOX ── */
-.pb{background:linear-gradient(135deg,#fff9f9,#fff);border:1px solid #fdd;border-radius:6px;padding:18px;margin-bottom:22px}
-.pb .pt{font-weight:700;color:var(--red);font-size:14px;margin-bottom:12px}
-.pb .pi{display:flex;gap:10px;margin-bottom:8px;font-size:13px}
-.pb .pe{font-size:16px;flex-shrink:0;width:24px}
+.pb{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;margin-bottom:24px;box-shadow:var(--shadow)}
+.pb .pt{font-weight:700;color:var(--primary);font-size:15px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.pb .pt::before{content:'🧠';font-size:18px}
+.pb .pi{display:flex;gap:14px;margin-bottom:12px;font-size:14px;padding:12px;background:var(--bg);border-radius:var(--radius-sm)}
+.pb .pe{font-size:20px;flex-shrink:0;width:28px;text-align:center}
 
 /* ── IDEAS ── */
-.ig{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
-@media(max-width:700px){.ig{grid-template-columns:1fr}}
-.ic{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:14px}
-.ic .inum{display:inline-block;width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;text-align:center;line-height:22px;font-size:11px;font-weight:700;margin-bottom:8px}
-.ic .ih{font-weight:700;font-size:13px;margin-bottom:6px}
-.ic .ib{font-size:12px;color:var(--g6);line-height:1.6}
-.ic .ip{margin-top:8px;font-size:11px;color:var(--blue);font-weight:700}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+@media(max-width:768px){.ig{grid-template-columns:1fr}}
+.ic{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:all .2s;position:relative;overflow:hidden}
+.ic::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--accent),var(--primary))}
+.ic:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.ic .inum{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;border-radius:50%;font-size:12px;font-weight:700;margin-bottom:12px;box-shadow:0 2px 8px rgba(15,76,129,0.3)}
+.ic .ih{font-weight:700;font-size:14px;margin-bottom:8px;color:var(--text)}
+.ic .ib{font-size:13px;color:var(--text-muted);line-height:1.7}
+.ic .ip{margin-top:12px;font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
 
 /* ── KEYWORDS ── */
-.kc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.kt{padding:5px 12px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid}
-.kh{background:#fde8e8;border-color:#f5bcbc;color:var(--red)}
-.km{background:var(--blue-l);border-color:#b3d7f5;color:var(--blue)}
-.kl{background:#f0f0f0;border-color:#ddd;color:#666}
+.kc{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.kt{padding:8px 16px;border-radius:25px;font-size:12px;font-weight:600;border:1px solid;transition:all .2s;cursor:default}
+.kt:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.kh{background:linear-gradient(135deg,#fee2e2 0%,#fecaca 100%);border-color:#fca5a5;color:var(--danger)}
+.km{background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border-color:#93c5fd;color:#2563eb}
+.kl{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-color:#d1d5db;color:var(--text-muted)}
 
 /* ── EMAIL ── */
-.ebox{background:#f8f8f8;border:1px solid var(--bd);border-radius:6px;padding:16px;font-size:12px;font-family:'Courier New',monospace;white-space:pre-wrap;line-height:1.8;color:var(--g3);margin-bottom:22px}
+.ebox{background:#1e293b;border-radius:var(--radius);padding:20px 24px;font-size:12px;font-family:'Fira Code','Courier New',monospace;white-space:pre-wrap;line-height:2;color:#e2e8f0;margin-bottom:24px;overflow-x:auto}
 
 /* ── SIDEBAR ── */
 .sidebar{display:flex;flex-direction:column;gap:16px}
-.scard{background:var(--wh);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
-.sh{background:var(--black);color:#fff;padding:10px 14px;font-size:12px;font-weight:700;letter-spacing:.5px}
-.sb{padding:14px}
+.scard{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--border)}
+.sh{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);color:#fff;padding:14px 18px;font-size:13px;font-weight:700;letter-spacing:0.3px;display:flex;align-items:center;gap:10px}
+.sh::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.2);margin-left:10px}
+.sb{padding:18px}
 
-.b3i{display:flex;gap:10px;margin-bottom:12px;font-size:13px;align-items:flex-start}
+.b3i{display:flex;gap:12px;margin-bottom:14px;font-size:13px;align-items:flex-start}
 .b3i:last-child{margin-bottom:0}
-.b3n{width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;text-align:center;line-height:22px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px}
-.b3t{line-height:1.6;color:var(--g6)}
+.b3n{flex-shrink:0;width:26px;height:26px;background:linear-gradient(135deg,var(--accent) 0%,var(--primary) 100%);color:#fff;border-radius:50%;text-align:center;line-height:26px;font-size:12px;font-weight:700;box-shadow:0 2px 6px rgba(0,180,216,0.3)}
+.b3t{line-height:1.7;color:var(--text-muted)}
 
-.rr{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px dashed var(--bd);font-size:13px}
+.rr{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--border);font-size:13px}
 .rr:last-child{border-bottom:none}
-.rp{color:var(--g6);font-size:12px}.rv{font-weight:700;font-family:monospace}
+.rp{color:var(--text-muted);font-size:12px}.rv{font-weight:700;font-family:monospace;color:var(--primary)}
 
-.fi{padding:8px 0;border-bottom:1px dashed var(--bd);font-size:13px}
+.fi{padding:10px 0;border-bottom:1px dashed var(--border);font-size:13px}
 .fi:last-child{border-bottom:none}
-.fd{color:var(--g9);font-size:11px;margin-bottom:2px}
-.fn{font-weight:600}
-.fb{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;margin-left:4px;background:#fde8e8;color:var(--red)}
+.fd{color:var(--text-muted);font-size:11px;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.3px}.fn{font-weight:600;color:var(--text)}
+.fb{display:inline-block;font-size:10px;padding:3px 8px;border-radius:12px;margin-left:6px;background:var(--warm);color:#fff;font-weight:600}
 
 .hw{list-style:none;counter-reset:hw}
-.hw li{counter-increment:hw;padding:5px 0;border-bottom:1px dashed var(--bd);font-size:13px;display:flex;align-items:center;gap:8px}
+.hw li{counter-increment:hw;padding:8px 0;border-bottom:1px dashed var(--border);font-size:13px;display:flex;align-items:center;gap:10px;color:var(--text)}
 .hw li:last-child{border-bottom:none}
-.hw li::before{content:counter(hw);display:inline-block;width:18px;height:18px;background:var(--bg);border-radius:3px;text-align:center;line-height:18px;font-size:10px;color:var(--g9);flex-shrink:0}
-.hw li.h1::before{background:var(--red);color:#fff}
-.hw li.h2::before{background:var(--orange);color:#fff}
-.hw li.h3::before{background:#999;color:#fff}
+.hw li::before{content:counter(hw);display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--bg);border-radius:6px;text-align:center;font-size:11px;font-weight:700;color:var(--text-muted);flex-shrink:0}
+.hw li.h1::before{background:var(--danger);color:#fff}
+.hw li.h2::before{background:var(--warning);color:#fff}
+.hw li.h3::before{background:var(--success);color:#fff}
 
-.sl{font-size:12px;color:var(--g6)}
-.sl a{color:var(--blue);text-decoration:none}
-.sl a:hover{text-decoration:underline}
-.sl li{padding:3px 0;list-style:disc;margin-left:14px}
+.sl{font-size:12px;color:var(--text-muted)}
+.sl a{color:var(--primary);text-decoration:none}.sl a:hover{color:var(--accent);text-decoration:underline}
+.sl li{padding:4px 0;list-style:disc;margin-left:16px}
 
-/* ── CHART ── */
-.chart{margin-bottom:22px}
-.ct{font-size:12px;color:var(--g9);margin-bottom:8px}
-.cr{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px}
-.rl{width:80px;color:var(--g6);flex-shrink:0;text-align:right}
-.rw{flex:1;background:#f0f0f0;border-radius:3px;height:20px;overflow:hidden}
-.rb{height:100%;background:var(--red);border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:11px;color:#fff;white-space:nowrap;min-width:36px}
-.rb.bl{background:var(--blue)}.rb.gn{background:var(--green)}.rb.or{background:var(--orange)}
-
-footer{background:var(--black);color:#555;text-align:center;padding:16px;font-size:12px;margin-top:24px}
-footer span{color:#888}
+/* ── FOOTER ── */
+footer{background:var(--text);color:#94a3b8;text-align:center;padding:24px;font-size:12px;margin-top:32px}
+footer span{color:#64748b}
 </style>
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
 <div class="hdr">
   <div class="hdr-top">
     <div>
       <h1>🐾 亚马逊宠物用品 竞品情报日报</h1>
-      <div class="meta">竞品监控：Furhaven · MidWest Homes for Pets &nbsp;|&nbsp; 目标市场：美国 Amazon.com &nbsp;|&nbsp; 2026-03-17 16:25 CST</div>
+      <div class="meta">竞品监控：Furhaven · MidWest Homes for Pets &nbsp;|&nbsp; 目标市场：美国 Amazon.com &nbsp;|&nbsp; 2026-03-17 CST</div>
     </div>
     <div class="badge">DAILY INTEL</div>
   </div>
@@ -203,17 +211,16 @@ footer span{color:#888}
   </nav>
 </div>
 
-<!-- ═══ TAB 1：竞品情报 ═══ -->
+<!-- TAB 1 -->
 <div id="tab-global" class="tab-panel on">
   <div class="wrap">
     <main>
-      <div class="disc">⚠️ <strong>数据说明：</strong>本报告综合品牌官网公开信息与行业知识库生成。竞品价格 / BSR / 评价量均为估算区间，请用 Jungle Scout / Helium 10 实时核验。</div>
+      <div class="disc"><strong>数据说明：</strong>本报告综合品牌官网公开信息与行业知识库生成。竞品价格 / BSR / 评价量均为估算区间，请用 Jungle Scout / Helium 10 实时核验。</div>
 
       <div class="ed">
-        📋 <strong>今日编辑总结：</strong>Furhaven 有 Cooling Beds 品类但非核心发力点，MidWest 完全无冷感垫产品线——<strong>冷感垫这条赛道，两大竞品均未集中火力</strong>。春季(3–4月)是北美冷感垫搜索量启动期，Q2 是全年流量最高峰。当前最紧迫的三件事：①趁流量窗口开启前备足库存；②在 Listing 中<strong>明确标注"Machine Washable + Chew-Proof"</strong>两大卖点（这是竞品差评的高频痛点）；③现在是种草内容发布黄金期，早于旺季6周铺内容效果最佳。
+        <strong>今日编辑总结：</strong>Furhaven 有 Cooling Beds 品类但非核心发力点，MidWest 完全无冷感垫产品线——<strong>冷感垫这条赛道，两大竞品均未集中火力</strong>。春季(3–4月)是北美冷感垫搜索量启动期，Q2 是全年流量最高峰。当前最紧迫的三件事：①趁流量窗口开启前备足库存；②在 Listing 中<strong>明确标注"Machine Washable + Chew-Proof"</strong>两大卖点（这是竞品差评的高频痛点）；③现在是种草内容发布黄金期，早于旺季6周铺内容效果最佳。
       </div>
 
-      <!-- KPI 信号灯 -->
       <div class="signals">
         <div class="sc">
           <div class="sl">冷感垫类目竞争指数</div>
@@ -232,7 +239,6 @@ footer span{color:#888}
         </div>
       </div>
 
-      <!-- 竞品快照 -->
       <div class="st">竞品快照</div>
       <div class="cg">
         <div class="cc">
@@ -265,7 +271,6 @@ footer span{color:#888}
         </div>
       </div>
 
-      <!-- 行业动态 -->
       <div class="st">近期行业动态</div>
 
       <div class="ni">
@@ -299,7 +304,6 @@ footer span{color:#888}
       </div>
     </main>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="scard">
         <div class="sh">✅ 今日 3 件大事</div>
@@ -363,7 +367,7 @@ footer span{color:#888}
   </div>
 </div>
 
-<!-- ═══ TAB 2：产品对标 ═══ -->
+<!-- TAB 2 -->
 <div id="tab-products" class="tab-panel">
   <div class="wrap">
     <main>
@@ -486,10 +490,10 @@ footer span{color:#888}
             <li class="h2">cooling mat chew proof dog</li>
             <li class="h3">large dog cooling pad</li>
             <li>self cooling mat dogs cats</li>
-            <li>pet cool mat summer</li>
-            <li>cooling dog mat non toxic</li>
+            <li>pet cooling mat non toxic</li>
+            <li>cat summer cooling mat</li>
             <li>dog cooling blanket washable</li>
-            <li>cat summer cooling pad</li>
+            <li>cooling pad puppy safe</li>
           </ul>
         </div>
       </div>
@@ -508,13 +512,13 @@ footer span{color:#888}
   </div>
 </div>
 
-<!-- ═══ TAB 3：买家心理 ═══ -->
+<!-- TAB 3 -->
 <div id="tab-buyer" class="tab-panel">
   <div class="wrap">
     <main>
       <div class="st">北美买家购买冷感垫的心理信号</div>
       <div class="pb">
-        <div class="pt">🧠 买家在想什么（冷感垫专项）</div>
+        <div class="pt">买家在想什么（冷感垫专项）</div>
         <div class="pi"><span class="pe">🌡️</span><span><strong>核心购买动机：</strong>宠物中暑/过热焦虑。"My dog pants all night"、"vet suggested cooling mat"——医疗焦虑驱动购买，说服成本低。</span></div>
         <div class="pi"><span class="pe">🧹</span><span><strong>最大购买顾虑：</strong>清洁麻烦。"How do you wash it?"是冷感垫 Q&A 最高频问题。可机洗是真实痛点，不是营销噱头。</span></div>
         <div class="pi"><span class="pe">🐕</span><span><strong>第二大顾虑：</strong>耐用性。养了爱咬东西的狗的主人（幼犬/边牧/拉布拉多）把"耐撕咬"列为 Top 3 购买决策因素。</span></div>
@@ -576,7 +580,7 @@ footer span{color:#888}
   </div>
 </div>
 
-<!-- ═══ TAB 4：发帖灵感 ═══ -->
+<!-- TAB 4 -->
 <div id="tab-inspo" class="tab-panel">
   <div class="wrap">
     <main>
@@ -605,11 +609,11 @@ footer span{color:#888}
       <div class="st">内容库（6 条可用素材方向）</div>
       <div class="ig">
         <div class="ic"><div class="inum">1</div><div class="ih">🧺 "机洗测试" 系列</div><div class="ib">拍从洗衣机取出垫子的 before/after，强调无变形/不泄漏。直接命中最高频差评，建信任最快。</div><div class="ip">📱 TikTok · Reels</div></div>
-        <div class="ic"><div class="inum">2</div><div class="ib">把同款垫子给牧羊犬/拉布拉多啃5分钟，全程拍下来。耐咬测试真实性>>广告语。</div><div class="ih">🐾 "耐咬挑战" 测试视频</div><div class="ip">📱 YouTube Shorts · TikTok</div></div>
-        <div class="ic"><div class="inum">3</div><div class="inum" style="display:none">3</div><div class="ih">🌡️ "宠物中暑症状" 科普</div><div class="ib">兽医推荐类高信任内容，植入"冷感垫作为应对方案之一"，自然引流。</div><div class="ip">📱 Pinterest · Instagram · YouTube</div></div>
+        <div class="ic"><div class="inum">2</div><div class="ih">🐾 "耐咬挑战" 测试视频</div><div class="ib">把同款垫子给牧羊犬/拉布拉多啃5分钟，全程拍下来。耐咬测试真实性>>广告语。</div><div class="ip">📱 YouTube Shorts · TikTok</div></div>
+        <div class="ic"><div class="inum">3</div><div class="ih">🌡️ "宠物中暑症状" 科普</div><div class="ib">兽医推荐类高信任内容，植入"冷感垫作为应对方案之一"，自然引流。</div><div class="ip">📱 Pinterest · Instagram · YouTube</div></div>
         <div class="ic"><div class="inum">4</div><div class="ih">🏠 "放在家里的颜值展示"</div><div class="ib">家居实景拍摄，展示产品放在地板/沙发旁的效果。打"好看又实用"的定位，区别于白牌。</div><div class="ip">📱 Pinterest · Instagram</div></div>
-        <div class="ic"><div class="inum">5</div><div class="ib">对比凝胶垫（泄漏风险）vs 你的产品（安全材质），科普而不攻击，让买家自己得出结论。</div><div class="ih">⚖️ "凝胶垫 vs 安全垫" 对比</div><div class="ip">📱 Facebook Group · TikTok</div></div>
-        <div class="ic"><div class="inum">6</div><div class="ib">按体重/犬种推荐尺码，做成图片/视频，贴近搜索习惯（"for golden retriever"、"for corgi"）。</div><div class="ih">📐 "哪款尺码适合你的狗？"</div><div class="ip">📱 Pinterest · Amazon A+</div></div>
+        <div class="ic"><div class="inum">5</div><div class="ih">⚖️ "凝胶垫 vs 安全垫" 对比</div><div class="ib">对比凝胶垫（泄漏风险）vs 你的产品（安全材质），科普而不攻击，让买家自己得出结论。</div><div class="ip">📱 Facebook Group · TikTok</div></div>
+        <div class="ic"><div class="inum">6</div><div class="ih">📐 "哪款尺码适合你的狗？"</div><div class="ib">按体重/犬种推荐尺码，做成图片/视频，贴近搜索习惯（"for golden retriever"、"for corgi"）。</div><div class="ip">📱 Pinterest · Amazon A+</div></div>
       </div>
 
       <div class="st">Amazon / Google 热搜词（冷感垫类目）</div>
@@ -622,7 +626,7 @@ footer span{color:#888}
         <span class="kt km">cat cooling mat summer</span>
         <span class="kt km">cooling dog blanket washable</span>
         <span class="kt km">cooling mat puppy safe</span>
-        <span class="kt km">dog mat no gel leak</span>
+        <span class="kt km">dog cooling mat no gel leak</span>
         <span class="kt km">pressure activated cooling pad</span>
         <span class="kt kl">dog cooling mat outdoor</span>
         <span class="kt kl">cooling pad for senior dogs</span>
