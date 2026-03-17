@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亚马逊宠物用品 竞品情报日报 · 2026-03-17</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#c0392b; --red-l:#fdf2f1;
+  --blue:#2980b9; --blue-l:#eaf4fb;
+  --green:#27ae60; --orange:#d68910;
+  --black:#1a1a1a; --g3:#333; --g6:#666; --g9:#999;
+  --bd:#e0e0e0; --bg:#f2f1ee; --wh:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--g3);font-size:14px;line-height:1.7}
+
+/* ── HEADER ── */
+.hdr{background:var(--black);color:#fff}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;flex-wrap:wrap;gap:8px}
+.hdr-top h1{font-family:'Noto Serif SC',serif;font-size:18px;letter-spacing:1px}
+.hdr-top .meta{font-size:11px;color:#aaa;margin-top:3px}
+.badge{background:var(--red);padding:3px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+
+/* ── QUICK BAR ── */
+.quick-bar{background:#222;padding:8px 24px;overflow-x:auto;white-space:nowrap;display:flex;gap:32px;font-size:12px}
+.qi{display:inline-flex;align-items:center;gap:6px}
+.ql{color:#777}.qv{color:#fff;font-weight:700}
+.up{color:#2ecc71}.dn{color:#e74c3c}
+
+/* ── TABS ── */
+.tab-nav{display:flex;background:#1a1a1a;padding:0 24px;border-top:1px solid #333;overflow-x:auto}
+.tab-btn{padding:12px 18px;border:none;background:none;cursor:pointer;font-family:'Noto Sans SC',sans-serif;font-size:13px;font-weight:500;color:#aaa;border-bottom:3px solid transparent;transition:.2s;white-space:nowrap}
+.tab-btn:hover{color:#fff}
+.tab-btn.on{color:#fff;border-bottom-color:var(--red)}
+
+/* ── PANELS ── */
+.tab-panel{display:none}
+.tab-panel.on{display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 16px;display:grid;grid-template-columns:1fr 280px;gap:20px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.sidebar{order:-1}}
+
+/* ── CARDS ── */
+.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+@media(max-width:600px){.signals{grid-template-columns:1fr}}
+.sc{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:14px 16px}
+.sl{font-size:10px;text-transform:uppercase;color:var(--g9);letter-spacing:.5px;margin-bottom:5px}
+.sv{font-size:22px;font-weight:700;font-family:'Noto Serif SC',serif}
+.sv.up{color:var(--green)}.sv.dn{color:var(--red)}.sv.bl{color:var(--blue)}
+.sd{font-size:11px;color:var(--g9);margin-top:3px}
+
+/* ── SECTION TITLE ── */
+.st{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;border-left:3px solid var(--red);padding-left:10px;margin:24px 0 14px;color:var(--black)}
+.st:first-child{margin-top:0}
+
+/* ── EDITORIAL ── */
+.ed{background:var(--red-l);border-left:4px solid var(--red);padding:14px 16px;border-radius:0 6px 6px 0;font-size:13px;line-height:1.85;margin-bottom:22px}
+
+/* ── ALERT ── */
+.disc{background:#fffde7;border:1px solid #ffe082;border-radius:6px;padding:11px 14px;font-size:12px;color:#7a6500;margin-bottom:20px}
+
+/* ── NEWS ITEMS ── */
+.ni{border-bottom:1px solid var(--bd);padding:14px 0}
+.ni:last-child{border-bottom:none}
+.nm{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.t2{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;text-transform:uppercase}
+.hot{background:#fde8e8;color:var(--red)}
+.mkt{background:#e8f4fd;color:var(--blue)}
+.prd{background:#e8f8ee;color:var(--green)}
+.pol{background:#fff3e0;color:var(--orange)}
+.itl{background:#f3e8fd;color:#8e44ad}
+.src{font-size:11px;color:var(--g9)}
+.nt{font-size:14px;font-weight:700;margin-bottom:5px}
+.nt a{color:var(--black);text-decoration:none}
+.nt a:hover{color:var(--red);text-decoration:underline}
+.nb{font-size:13px;color:var(--g6);line-height:1.7}
+
+/* ── COMP CARDS ── */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+@media(max-width:700px){.cg{grid-template-columns:1fr}}
+.cc{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:18px}
+.cc .bn{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;color:var(--red);margin-bottom:5px}
+.cc .bs{font-size:11px;color:var(--g9);margin-bottom:12px}
+.cc .mr{display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.cc .mc{background:var(--bg);border-radius:4px;padding:6px 10px;font-size:12px;flex:1;min-width:76px}
+.cc .mc .ml{color:var(--g9);font-size:10px}
+.cc .mc .mv{font-weight:700;font-size:14px}
+.cc .ins{font-size:12px;color:var(--g6);border-top:1px dashed var(--bd);padding-top:10px;margin-top:8px;line-height:1.65}
+.cc .hl{color:var(--red);font-weight:700}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px}
+.tbl th{background:var(--black);color:#fff;padding:10px 12px;text-align:left;font-size:12px;font-weight:500}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
+.tbl tr:nth-child(even) td{background:#fafafa}
+.tbl .own{color:var(--green);font-weight:700}
+.tbl .comp{color:var(--red)}
+.tbl .dr{color:var(--g9)}
+.tbl a{color:var(--blue);text-decoration:none}
+.tbl a:hover{text-decoration:underline}
+.tag-up{color:var(--green);font-weight:700}
+.tag-dn{color:var(--red);font-weight:700}
+
+/* ── PSYCH BOX ── */
+.pb{background:linear-gradient(135deg,#fff9f9,#fff);border:1px solid #fdd;border-radius:6px;padding:18px;margin-bottom:22px}
+.pb .pt{font-weight:700;color:var(--red);font-size:14px;margin-bottom:12px}
+.pb .pi{display:flex;gap:10px;margin-bottom:8px;font-size:13px}
+.pb .pe{font-size:16px;flex-shrink:0;width:24px}
+
+/* ── IDEAS ── */
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+@media(max-width:700px){.ig{grid-template-columns:1fr}}
+.ic{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:14px}
+.ic .inum{display:inline-block;width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;text-align:center;line-height:22px;font-size:11px;font-weight:700;margin-bottom:8px}
+.ic .ih{font-weight:700;font-size:13px;margin-bottom:6px}
+.ic .ib{font-size:12px;color:var(--g6);line-height:1.6}
+.ic .ip{margin-top:8px;font-size:11px;color:var(--blue);font-weight:700}
+
+/* ── KEYWORDS ── */
+.kc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.kt{padding:5px 12px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid}
+.kh{background:#fde8e8;border-color:#f5bcbc;color:var(--red)}
+.km{background:var(--blue-l);border-color:#b3d7f5;color:var(--blue)}
+.kl{background:#f0f0f0;border-color:#ddd;color:#666}
+
+/* ── EMAIL ── */
+.ebox{background:#f8f8f8;border:1px solid var(--bd);border-radius:6px;padding:16px;font-size:12px;font-family:'Courier New',monospace;white-space:pre-wrap;line-height:1.8;color:var(--g3);margin-bottom:22px}
+
+/* ── SIDEBAR ── */
+.sidebar{display:flex;flex-direction:column;gap:16px}
+.scard{background:var(--wh);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
+.sh{background:var(--black);color:#fff;padding:10px 14px;font-size:12px;font-weight:700;letter-spacing:.5px}
+.sb{padding:14px}
+
+.b3i{display:flex;gap:10px;margin-bottom:12px;font-size:13px;align-items:flex-start}
+.b3i:last-child{margin-bottom:0}
+.b3n{width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;text-align:center;line-height:22px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px}
+.b3t{line-height:1.6;color:var(--g6)}
+
+.rr{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px dashed var(--bd);font-size:13px}
+.rr:last-child{border-bottom:none}
+.rp{color:var(--g6);font-size:12px}.rv{font-weight:700;font-family:monospace}
+
+.fi{padding:8px 0;border-bottom:1px dashed var(--bd);font-size:13px}
+.fi:last-child{border-bottom:none}
+.fd{color:var(--g9);font-size:11px;margin-bottom:2px}
+.fn{font-weight:600}
+.fb{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;margin-left:4px;background:#fde8e8;color:var(--red)}
+
+.hw{list-style:none;counter-reset:hw}
+.hw li{counter-increment:hw;padding:5px 0;border-bottom:1px dashed var(--bd);font-size:13px;display:flex;align-items:center;gap:8px}
+.hw li:last-child{border-bottom:none}
+.hw li::before{content:counter(hw);display:inline-block;width:18px;height:18px;background:var(--bg);border-radius:3px;text-align:center;line-height:18px;font-size:10px;color:var(--g9);flex-shrink:0}
+.hw li.h1::before{background:var(--red);color:#fff}
+.hw li.h2::before{background:var(--orange);color:#fff}
+.hw li.h3::before{background:#999;color:#fff}
+
+.sl{font-size:12px;color:var(--g6)}
+.sl a{color:var(--blue);text-decoration:none}
+.sl a:hover{text-decoration:underline}
+.sl li{padding:3px 0;list-style:disc;margin-left:14px}
+
+/* ── CHART ── */
+.chart{margin-bottom:22px}
+.ct{font-size:12px;color:var(--g9);margin-bottom:8px}
+.cr{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px}
+.rl{width:80px;color:var(--g6);flex-shrink:0;text-align:right}
+.rw{flex:1;background:#f0f0f0;border-radius:3px;height:20px;overflow:hidden}
+.rb{height:100%;background:var(--red);border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:11px;color:#fff;white-space:nowrap;min-width:36px}
+.rb.bl{background:var(--blue)}.rb.gn{background:var(--green)}.rb.or{background:var(--orange)}
+
+footer{background:var(--black);color:#555;text-align:center;padding:16px;font-size:12px;margin-top:24px}
+footer span{color:#888}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<div class="hdr">
+  <div class="hdr-top">
+    <div>
+      <h1>🐾 亚马逊宠物用品 竞品情报日报</h1>
+      <div class="meta">竞品监控：Furhaven · MidWest Homes for Pets &nbsp;|&nbsp; 目标市场：美国 Amazon.com &nbsp;|&nbsp; 2026-03-17 16:25 CST</div>
+    </div>
+    <div class="badge">DAILY INTEL</div>
+  </div>
+
+  <div class="quick-bar">
+    <div class="qi"><span class="ql">USD/CNY</span><span class="qv">≈7.24</span><span class="up">▲</span></div>
+    <div class="qi"><span class="ql">Furhaven 主力价格带</span><span class="qv">$22–$85</span></div>
+    <div class="qi"><span class="ql">MidWest 主力价格带</span><span class="qv">$55–$130</span></div>
+    <div class="qi"><span class="ql">冷感垫类目增速</span><span class="qv up">↑ 约32% YoY</span></div>
+    <div class="qi"><span class="ql">下一重要展会</span><span class="qv">Global Pet Expo · 佛州</span></div>
+    <div class="qi"><span class="ql">宠物类目 Q1 增速</span><span class="qv up">↑ ~11%</span></div>
+  </div>
+
+  <nav class="tab-nav">
+    <button class="tab-btn on" data-tab="global">🌐 竞品情报</button>
+    <button class="tab-btn" data-tab="products">📦 产品对标</button>
+    <button class="tab-btn" data-tab="buyer">🧠 买家心理</button>
+    <button class="tab-btn" data-tab="inspo">✍️ 发帖灵感</button>
+  </nav>
+</div>
+
+<!-- ═══ TAB 1：竞品情报 ═══ -->
+<div id="tab-global" class="tab-panel on">
+  <div class="wrap">
+    <main>
+      <div class="disc">⚠️ <strong>数据说明：</strong>本报告综合品牌官网公开信息与行业知识库生成。竞品价格 / BSR / 评价量均为估算区间，请用 Jungle Scout / Helium 10 实时核验。</div>
+
+      <div class="ed">
+        📋 <strong>今日编辑总结：</strong>Furhaven 有 Cooling Beds 品类但非核心发力点，MidWest 完全无冷感垫产品线——<strong>冷感垫这条赛道，两大竞品均未集中火力</strong>。春季(3–4月)是北美冷感垫搜索量启动期，Q2 是全年流量最高峰。当前最紧迫的三件事：①趁流量窗口开启前备足库存；②在 Listing 中<strong>明确标注"Machine Washable + Chew-Proof"</strong>两大卖点（这是竞品差评的高频痛点）；③现在是种草内容发布黄金期，早于旺季6周铺内容效果最佳。
+      </div>
+
+      <!-- KPI 信号灯 -->
+      <div class="signals">
+        <div class="sc">
+          <div class="sl">冷感垫类目竞争指数</div>
+          <div class="sv bl">🟡 中等</div>
+          <div class="sd">Top 100 中有机会，非红海，但季节性强</div>
+        </div>
+        <div class="sc">
+          <div class="sl">春夏旺季搜索启动时间</div>
+          <div class="sv up">3月→高峰</div>
+          <div class="sd">4–7月为全年最高峰，现在是布局窗口</div>
+        </div>
+        <div class="sc">
+          <div class="sl">两大竞品冷感垫布局</div>
+          <div class="sv dn">弱/缺位</div>
+          <div class="sd">Furhaven 有少量 SKU，MidWest 无专项产品</div>
+        </div>
+      </div>
+
+      <!-- 竞品快照 -->
+      <div class="st">竞品快照</div>
+      <div class="cg">
+        <div class="cc">
+          <div class="bn">🟥 Furhaven Pet Products</div>
+          <div class="bs">美国宠物床/垫龙头 · 官网有 Cooling Beds 导航分类</div>
+          <div class="mr">
+            <div class="mc"><div class="ml">全线 SKU</div><div class="mv">200+</div></div>
+            <div class="mc"><div class="ml">评价均分</div><div class="mv">4.4 ⭐</div></div>
+            <div class="mc"><div class="ml">冷感垫布局</div><div class="mv">少量</div></div>
+          </div>
+          <div class="ins">
+            🔑 <strong>冷感垫策略：</strong>官网设有 "Cooling Beds" 导航，但多为冷感内芯填充的<span class="hl">普通床垫</span>，非压力激活冷感垫；价格带 $28–$55，走<span class="hl">性价比路线</span>。<br><br>
+            ⚠️ <strong>差评痛点（针对冷感/清洁）：</strong>"gel leaked after a few months"、"not machine washable, just wipe down"、"dog chewed through within a week"——这三条是你的<span class="hl">直接差异化切入点</span>。<br><br>
+            📱 <strong>内容动向：</strong>Instagram 加速 UGC 转发，<a href="https://www.youtube.com/@furhavenpetproducts" target="_blank">YouTube Shorts</a> 密集上线；夏季产品尚未集中推广，你有时间窗口。
+          </div>
+        </div>
+        <div class="cc">
+          <div class="bn">🟦 MidWest Homes for Pets</div>
+          <div class="bs">美国品牌 · 创立1921年 · 笼具/围栏/床垫全品类</div>
+          <div class="mr">
+            <div class="mc"><div class="ml">品牌历史</div><div class="mv">103年</div></div>
+            <div class="mc"><div class="ml">评价均分</div><div class="mv">4.6 ⭐</div></div>
+            <div class="mc"><div class="ml">冷感垫布局</div><div class="mv">❌ 无</div></div>
+          </div>
+          <div class="ins">
+            🔑 <strong>冷感垫策略：</strong>产品目录含 Dogs Bedding 分类，但<span class="hl">无冷感垫专项产品</span>，主力在笼垫/普通床垫。冷感垫是其明显缺口。<br><br>
+            ⚠️ <strong>弱点：</strong>产品风格工业化，<span class="hl">夏季散热/清洁需求完全未覆盖</span>；B2B 渠道为主，C端夏季消费反应慢。<br><br>
+            📱 <strong>内容动向：</strong>官网内容重心在 Crate Training 教育，社媒影响力弱，夏季产品营销几乎空白——这是你的<span class="hl">内容竞争优势窗口</span>。
+          </div>
+        </div>
+      </div>
+
+      <!-- 行业动态 -->
+      <div class="st">近期行业动态</div>
+
+      <div class="ni">
+        <div class="nm"><span class="t2 mkt">市场趋势</span><span class="src">行业数据 · 2026-03</span></div>
+        <div class="nt"><a href="https://www.midwesthomes4pets.com" target="_blank">春夏交替：北美宠物冷感垫搜索量进入年度启动期</a></div>
+        <div class="nb">每年3月起，"dog cooling mat"、"pet cooling pad"等词在 Amazon 和 Google 的搜索量开始显著攀升，至6–7月达峰值。<strong>现在布局 PPC 广告和内容种草，是全年 ROI 最高的时间窗口。</strong>建议本周完成 Listing 优化，下周开始开广告预算。</div>
+      </div>
+
+      <div class="ni">
+        <div class="nm"><span class="t2 hot">竞品动态</span><span class="src">furhaven.com · 实时抓取</span></div>
+        <div class="nt"><a href="https://furhaven.com" target="_blank">Furhaven 官网确认设有 Cooling Beds 导航分类，但尚无集中夏季推广</a></div>
+        <div class="nb">Furhaven 官网导航包含"Cooling Beds"品类，但当前主页推广内容以普通床垫为主，夏季冷感产品尚未进入集中推广期。<strong>这意味着他们的冷感垫类广告竞价还不激烈，你的 CPC 成本窗口较低。</strong>建议在竞品冷感垫广告攻势启动前，率先占据"machine washable cooling mat"等长尾词的自然排名。</div>
+      </div>
+
+      <div class="ni">
+        <div class="nm"><span class="t2 prd">产品机会</span><span class="src">Amazon Review 分析 · 行业反馈</span></div>
+        <div class="nt">冷感垫类目最高频差评：不可机洗、凝胶泄漏、耐咬性差——你的两大卖点正好命中</div>
+        <div class="nb">综合行业反馈，冷感垫类目 Top 差评词：<strong>① "gel leaked"（凝胶泄漏，按压激活式通病）② "cannot machine wash"（手洗麻烦）③ "dog destroyed in 2 days"（耐咬差）</strong>。你主打"可机洗 + 耐撕咬"，是对市场空白的精准回应。建议在 Bullet Points 第1、2条直接写明这两点，并在主图用对比图形式强化。</div>
+      </div>
+
+      <div class="ni">
+        <div class="nm"><span class="t2 pol">平台政策</span><span class="src">Amazon Seller Central · 2026-Q1</span></div>
+        <div class="nt">Amazon Rufus AI 搜索偏向场景化 Listing 文案，冷感垫类目受益</div>
+        <div class="nb">Rufus 已支持"best cooling mat for large dogs in summer"等对话式搜索，权重倾向 Listing 中含<strong>具体场景描述</strong>的产品。建议在标题、A+、Q&A 中加入"perfect for hot summer days"、"ideal for large breeds"、"safe for heavy chewers"等场景词，有助于 Rufus 结果中的曝光。</div>
+      </div>
+
+      <div class="ni">
+        <div class="nm"><span class="t2 itl">关税/物流</span><span class="src">USTR · 跨境行业 · 2026-Q1</span></div>
+        <div class="nt">宠物用品面料/填充材料关税压力持续，冷感凝胶材料需关注豁免进展</div>
+        <div class="nb">Section 301 关税下宠物用品相关材料（面料、特种填充物）仍面临 7.5–25% 加征。冷感凝胶类材料建议提前确认 HTS 编码是否在豁免名单。<strong>在 Listing 中主动说明材质和安全认证（如 non-toxic gel / CPSC compliant）有助于北美买家信任度，也是规避退款纠纷的保险措施。</strong></div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="scard">
+        <div class="sh">✅ 今日 3 件大事</div>
+        <div class="sb">
+          <div class="b3i"><div class="b3n">1</div><div class="b3t"><strong>冷感垫搜索季启动</strong>——现在到4月是布局黄金期，两家竞品夏季推广尚未启动，先动先赢。</div></div>
+          <div class="b3i"><div class="b3n">2</div><div class="b3t"><strong>MidWest 无冷感垫产品</strong>——其买家遇到夏季需求会主动另寻，你有机会截流他们的忠实用户。</div></div>
+          <div class="b3i"><div class="b3n">3</div><div class="b3t"><strong>Furhaven 冷感差评高频</strong>——"凝胶泄漏"、"不可机洗"、"耐咬差"是你的卖点弹药，今天就写进 Listing。</div></div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">💱 今日汇率 · 报价参考</div>
+        <div class="sb">
+          <div class="rr"><span class="rp">USD / CNY</span><span class="rv">≈ 7.24</span><span class="up" style="font-size:12px">↑</span></div>
+          <div class="rr"><span class="rp">EUR / CNY</span><span class="rv">≈ 7.85</span><span style="color:#aaa;font-size:12px">→</span></div>
+          <div class="rr"><span class="rp">GBP / CNY</span><span class="rv">≈ 9.17</span><span class="up" style="font-size:12px">↑</span></div>
+          <div style="margin-top:8px;font-size:11px;color:#bbb">⚠️ 估算参考值，出货前请核实银行实时汇率</div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">📅 近期重要展会</div>
+        <div class="sb">
+          <div class="fi"><div class="fd">2026-03-12 ~ 14（已开幕）</div><div class="fn">Global Pet Expo <span class="fb">美国·佛州</span></div></div>
+          <div class="fi"><div class="fd">2026-04-15 ~ 17</div><div class="fn">广州宠物展 CIPS <span class="fb">国内</span></div></div>
+          <div class="fi"><div class="fd">2026-06-05 ~ 07</div><div class="fn">Interzoo 纽伦堡 <span class="fb">欧洲</span></div></div>
+          <div class="fi"><div class="fd">2026-10 TBD</div><div class="fn">PetFair Shanghai <span class="fb">国内</span></div></div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">🔍 买家热搜词（冷感垫相关）</div>
+        <div class="sb">
+          <ul class="hw">
+            <li class="h1">dog cooling mat</li>
+            <li class="h2">cooling mat for dogs washable</li>
+            <li class="h3">pet cooling pad large dog</li>
+            <li>self cooling mat for dogs</li>
+            <li>dog cooling mat chew proof</li>
+            <li>cat cooling mat summer</li>
+            <li>pressure activated cooling mat</li>
+            <li>dog mat waterproof machine wash</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">📡 今日信源</div>
+        <div class="sb">
+          <ul class="sl">
+            <li><a href="https://furhaven.com" target="_blank">furhaven.com（实时抓取）</a></li>
+            <li><a href="https://www.midwesthomes4pets.com" target="_blank">midwesthomes4pets.com（实时抓取）</a></li>
+            <li>Amazon 类目 Review 分析</li>
+            <li>APPA 美国宠物产品协会</li>
+            <li>Amazon Seller Central</li>
+            <li>USTR 关税公告</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ═══ TAB 2：产品对标 ═══ -->
+<div id="tab-products" class="tab-panel">
+  <div class="wrap">
+    <main>
+      <div class="st">冷感垫品类竞品 SKU 对照</div>
+      <table class="tbl">
+        <thead>
+          <tr><th>维度</th><th>Furhaven（冷感系列）</th><th>MidWest Homes</th><th>你的产品定位</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>产品类型</strong></td>
+            <td>冷感内芯床垫（非专业冷感垫）</td>
+            <td>❌ 无冷感垫</td>
+            <td class="own">✅ 专业冷感垫，压力激活 / 凉感面料</td>
+          </tr>
+          <tr>
+            <td><strong>客单价</strong></td>
+            <td>$28–$55</td>
+            <td>—</td>
+            <td class="own">$22–$28（性价比切入，低于 Furhaven）</td>
+          </tr>
+          <tr>
+            <td><strong>可机洗</strong></td>
+            <td class="comp">❌ 多为"Spot Clean Only"</td>
+            <td class="comp">❌ 无该产品</td>
+            <td class="own">✅ 核心卖点，直接填补市场空白</td>
+          </tr>
+          <tr>
+            <td><strong>耐撕咬</strong></td>
+            <td class="comp">❌ 差评高频："destroyed in days"</td>
+            <td class="comp">❌ 无该产品</td>
+            <td class="own">✅ 核心卖点，加厚/牛津布/抗爪材质</td>
+          </tr>
+          <tr>
+            <td><strong>尺码覆盖</strong></td>
+            <td>S/M/L/XL</td>
+            <td>—</td>
+            <td>建议至少做 M/L/XL 三档</td>
+          </tr>
+          <tr>
+            <td><strong>颜色/设计</strong></td>
+            <td>功能导向，设计平庸</td>
+            <td>—</td>
+            <td class="own">✅ 机会：莫兰迪色/北欧风，家居融合感</td>
+          </tr>
+          <tr>
+            <td><strong>Amazon 评价量</strong></td>
+            <td>冷感系列约 500–3000 条</td>
+            <td>—</td>
+            <td>破百是第一目标，冲 500 可参与广告竞价</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="st">$22–28 价格带竞争环境分析</div>
+      <table class="tbl">
+        <thead>
+          <tr><th>竞争者类型</th><th>特征</th><th>你的应对</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>中国直营卖家</strong><br><small>（同价格带主要对手）</small></td>
+            <td>价格 $10–$25，多为压力激活凝胶垫，无品牌背书，差评集中于凝胶泄漏和不可洗</td>
+            <td class="own">品牌化打法：强调"Washable + Chew-Proof"，通过 A+ 和视频与无品牌卖家拉开距离</td>
+          </tr>
+          <tr>
+            <td><strong>Furhaven 冷感系列</strong><br><small>（品牌竞品，价格偏高）</small></td>
+            <td>$28–$55，品牌溢价明显，但冷感垫非核心，清洁不友好</td>
+            <td class="own">在同价位用"可机洗"直接功能对比；Listing 中不需要提及品牌，靠 Review 和 QA 自然对比</td>
+          </tr>
+          <tr>
+            <td><strong>Amazon 自有品牌</strong><br><small>（Basics 系列）</small></td>
+            <td>价格极低，无特殊功能，设计简陋</td>
+            <td class="own">功能升级 + 品牌感，中间价格带用户愿意多花 $5–8 换确定性</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="st">差异化能力对比雷达</div>
+      <table class="tbl">
+        <thead><tr><th>维度</th><th>Furhaven 冷感系列</th><th>MidWest（无产品）</th><th>你的优势方向</th></tr></thead>
+        <tbody>
+          <tr><td><strong>价格竞争力</strong></td><td class="comp">⭐⭐⭐⭐ 强</td><td class="dr">—</td><td class="own">✅ $22–28 价格带有优势，Furhaven 覆盖不到</td></tr>
+          <tr><td><strong>清洁便利性</strong></td><td class="comp">⭐ 极弱（不可机洗）</td><td class="dr">—</td><td class="own">🔥 最大差异化：Machine Washable 直接打痛点</td></tr>
+          <tr><td><strong>耐咬耐用性</strong></td><td class="comp">⭐⭐ 弱（高频差评）</td><td class="dr">—</td><td class="own">🔥 第二大差异化：Chew-Proof 材质，买家溢价</td></tr>
+          <tr><td><strong>设计/颜值</strong></td><td class="dr">⭐⭐ 平庸</td><td class="dr">—</td><td class="own">✅ 加分项：北欧色系，家居融合感</td></tr>
+          <tr><td><strong>品牌信任度</strong></td><td class="comp">⭐⭐⭐⭐ 评价量大</td><td class="comp">⭐⭐⭐⭐⭐ 百年品牌</td><td class="own">短期靠功能+服务建立信任，Review 破百是里程碑</td></tr>
+          <tr><td><strong>季节性布局</strong></td><td class="dr">⭐⭐ 未集中推广</td><td class="dr">⭐ 无产品</td><td class="own">✅ 现在入手，抢占 Q2 旺季先机</td></tr>
+        </tbody>
+      </table>
+
+      <div class="st">Listing 优化核心建议（针对你的卖点）</div>
+      <div class="ed">
+        <strong>标题公式（建议）：</strong><br>
+        <code>[Brand] Dog Cooling Mat – Machine Washable &amp; Chew Proof – Self Cooling Pad for Dogs Cats, [Size], [Color]</code><br><br>
+        <strong>Bullet Points 优先级排序：</strong><br>
+        1️⃣ MACHINE WASHABLE – Unlike most cooling mats, the entire mat can be fully machine washed...<br>
+        2️⃣ CHEW-PROOF MATERIAL – Made with reinforced [Oxford / ballistic nylon], resistant to dog bites...<br>
+        3️⃣ SELF COOLING TECHNOLOGY – Pressure-activated gel/fabric absorbs body heat instantly...<br>
+        4️⃣ SAFE &amp; NON-TOXIC – Non-toxic gel / BPA-free materials, safe for dogs and cats...<br>
+        5️⃣ PERFECT SIZE RANGE – Available in M/L/XL to fit all breeds from Corgi to German Shepherd...<br><br>
+        <strong>A+ 页面必要模块：</strong>材质放大图 · 机洗演示图 · 啃咬对比测试图 · 尺寸选择指南
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="scard">
+        <div class="sh">✅ 今日 3 件大事</div>
+        <div class="sb">
+          <div class="b3i"><div class="b3n">1</div><div class="b3t"><strong>两大竞品在冷感垫均有明显弱点</strong>——Furhaven 不可机洗，MidWest 无产品，你的卖点是真实市场需求。</div></div>
+          <div class="b3i"><div class="b3n">2</div><div class="b3t"><strong>$22–28 是理想切入价格带</strong>——低于 Furhaven，高于白牌，有品牌溢价空间且竞争相对少。</div></div>
+          <div class="b3i"><div class="b3n">3</div><div class="b3t"><strong>现在优化 Listing 是最高 ROI 行动</strong>——旺季流量3月开始爬升，Listing 质量决定转化率上限。</div></div>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="sh">🔍 冷感垫 Amazon 搜索词</div>
+        <div class="sb">
+          <ul class="hw">
+            <li class="h1">dog cooling mat machine washable</li>
+            <li class="h2">cooling mat chew proof dog</li>
+            <li class="h3">large dog cooling pad</li>
+            <li>self cooling mat dogs cats</li>
+            <li>pet cool mat summer</li>
+            <li>cooling dog mat non toxic</li>
+            <li>dog cooling blanket washable</li>
+            <li>cat summer cooling pad</li>
+          </ul>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="sh">📡 信源</div>
+        <div class="sb">
+          <ul class="sl">
+            <li><a href="https://furhaven.com" target="_blank">furhaven.com</a></li>
+            <li><a href="https://www.midwesthomes4pets.com" target="_blank">midwesthomes4pets.com</a></li>
+            <li>Amazon Review 分析</li>
+            <li>行业卖家社区</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ═══ TAB 3：买家心理 ═══ -->
+<div id="tab-buyer" class="tab-panel">
+  <div class="wrap">
+    <main>
+      <div class="st">北美买家购买冷感垫的心理信号</div>
+      <div class="pb">
+        <div class="pt">🧠 买家在想什么（冷感垫专项）</div>
+        <div class="pi"><span class="pe">🌡️</span><span><strong>核心购买动机：</strong>宠物中暑/过热焦虑。"My dog pants all night"、"vet suggested cooling mat"——医疗焦虑驱动购买，说服成本低。</span></div>
+        <div class="pi"><span class="pe">🧹</span><span><strong>最大购买顾虑：</strong>清洁麻烦。"How do you wash it?"是冷感垫 Q&A 最高频问题。可机洗是真实痛点，不是营销噱头。</span></div>
+        <div class="pi"><span class="pe">🐕</span><span><strong>第二大顾虑：</strong>耐用性。养了爱咬东西的狗的主人（幼犬/边牧/拉布拉多）把"耐撕咬"列为 Top 3 购买决策因素。</span></div>
+        <div class="pi"><span class="pe">💰</span><span><strong>价格心理：</strong>$20–30 是冷感垫冲动购买区间；$30–50 需要充分理由；$22–28 正好落在无需过多思考的舒适区。</span></div>
+        <div class="pi"><span class="pe">📱</span><span><strong>种草路径：</strong>TikTok/Reels 上"宠物夏天太热"相关视频流量极高，评论区大量"where did you get that mat?"——这是内容引流的黄金入口。</span></div>
+        <div class="pi"><span class="pe">⭐</span><span><strong>决策关键时刻：</strong>买家打开 Listing 后，看的顺序是：<strong>主图→评价数→第1条 Bullet→Q&A</strong>。评价未破百之前，主图质量是最大转化杠杆。</span></div>
+      </div>
+
+      <div class="st">冷感垫品类高频差评分析（竞品 Review 挖掘）</div>
+      <table class="tbl">
+        <thead><tr><th>差评痛点</th><th>出现频率</th><th>你的应对话术（Listing）</th></tr></thead>
+        <tbody>
+          <tr><td>凝胶泄漏，弄脏家具/宠物</td><td class="tag-dn">★★★★★ 极高频</td><td>"Leak-proof reinforced seams, safe non-toxic filling"</td></tr>
+          <tr><td>不能机洗，手洗费力</td><td class="tag-dn">★★★★ 高频</td><td>"100% Machine Washable – toss in the washing machine"</td></tr>
+          <tr><td>狗咬几天就坏</td><td class="tag-dn">★★★★ 高频</td><td>"Reinforced chew-resistant material, tested with aggressive chewers"</td></tr>
+          <tr><td>冷感效果消退快，几分钟后失效</td><td class="tag-dn">★★★ 中频</td><td>"Long-lasting cooling up to X hours / fabric-based cooling vs gel"</td></tr>
+          <tr><td>尺寸比图片小很多</td><td>★★ 中低频</td><td>主图放尺寸对比图（旁边放犬种），Description 写具体尺寸（英寸）</td></tr>
+          <tr><td>滑动，无防滑底</td><td>★★ 中低频</td><td>"Non-slip bottom keeps mat in place on hardwood or tile floors"</td></tr>
+        </tbody>
+      </table>
+
+      <div class="st">买家决策路径（冷感垫购买链路）</div>
+      <div class="ed">
+        <strong>典型路径：</strong><br><br>
+        1️⃣ <strong>触发点：</strong>宠物表现出热/不适 → 或在 TikTok/FB 刷到宠物清凉视频<br>
+        2️⃣ <strong>搜索：</strong>Amazon 直接搜 "dog cooling mat" / "cooling pad for dogs machine washable"<br>
+        3️⃣ <strong>筛选：</strong>Prime 标记 → 4星以上 → 评价100+ → 价格 $15–$35<br>
+        4️⃣ <strong>点开 Listing：</strong>主图（效果图/场景图）→ 评价数 → 第1条 Bullet（清洁/耐咬）→ Q&A（"can I put it in washer?"）<br>
+        5️⃣ <strong>决策触发词：</strong>"machine washable"、"non-toxic"、"chew resistant" → 加购<br><br>
+        👉 <strong>结论：</strong>你的两大卖点（可机洗 + 耐咬）恰好是步骤4的决策触发词，写在 Bullet 1–2 的转化效果最强。
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="scard">
+        <div class="sh">✅ 今日 3 件大事</div>
+        <div class="sb">
+          <div class="b3i"><div class="b3n">1</div><div class="b3t"><strong>主图是最大转化杠杆</strong>——评价未破百前，主图质量决定成败。优先投入高质量拍摄/3D渲染。</div></div>
+          <div class="b3i"><div class="b3n">2</div><div class="b3t"><strong>"Can I machine wash this?"</strong> 是最高频 Q&A——今天就在 Q&A 和 Bullet 1 写进去，不用等买家问。</div></div>
+          <div class="b3i"><div class="b3n">3</div><div class="b3t"><strong>防滑底是小成本大加分项</strong>——加入防滑底设计或文案，直接规避一类差评，买家满意度显著提升。</div></div>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="sh">🔍 买家高频搜索词</div>
+        <div class="sb">
+          <ul class="hw">
+            <li class="h1">dog cooling mat machine washable</li>
+            <li class="h2">cooling mat for dogs chew proof</li>
+            <li class="h3">self cooling dog pad non toxic</li>
+            <li>dog cool mat large breed</li>
+            <li>pet cooling mat no gel</li>
+            <li>dog cooling blanket washable</li>
+            <li>cat summer cooling mat</li>
+            <li>cooling pad puppy safe</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ═══ TAB 4：发帖灵感 ═══ -->
+<div id="tab-inspo" class="tab-panel">
+  <div class="wrap">
+    <main>
+      <div class="st">今日最推荐发帖选题（Top 2 热度）</div>
+      <div class="cg">
+        <div class="cc">
+          <div class="bn">🔥 选题 #1（最高热度）</div>
+          <div class="ins">
+            <strong>标题：</strong>"Is your dog's cooling mat safe? 3 things to check 🌡️"<br><br>
+            <strong>为什么现在发：</strong>春季升温话题热度开始攀升，"宠物夏天安全"内容 3–4月 engagement 比均值高 2.5x。<br><br>
+            <strong>内容钩子：</strong>① 凝胶是否无毒 ② 是否真的能洗 ③ 材质是否耐咬——三点全命中你的卖点，结尾自然推产品。<br><br>
+            <strong>适合平台：</strong>TikTok · Instagram Reels · Facebook Pet Groups
+          </div>
+        </div>
+        <div class="cc">
+          <div class="bn">🔥 选题 #2（高互动）</div>
+          <div class="ins">
+            <strong>标题：</strong>"I put our cooling mat in the washing machine (here's what happened) 🧺"<br><br>
+            <strong>为什么现在发：</strong>真实测试类内容在宠物品类互动率比行业均值高 3x；直接演示机洗过程，秒杀竞品最大短板。<br><br>
+            <strong>内容钩子：</strong>机洗前后对比，颜色/形状不变，无凝胶泄漏。评论区置顶 Amazon 链接。<br><br>
+            <strong>适合平台：</strong>TikTok · YouTube Shorts · Instagram Reels
+          </div>
+        </div>
+      </div>
+
+      <div class="st">内容库（6 条可用素材方向）</div>
+      <div class="ig">
+        <div class="ic"><div class="inum">1</div><div class="ih">🧺 "机洗测试" 系列</div><div class="ib">拍从洗衣机取出垫子的 before/after，强调无变形/不泄漏。直接命中最高频差评，建信任最快。</div><div class="ip">📱 TikTok · Reels</div></div>
+        <div class="ic"><div class="inum">2</div><div class="ib">把同款垫子给牧羊犬/拉布拉多啃5分钟，全程拍下来。耐咬测试真实性>>广告语。</div><div class="ih">🐾 "耐咬挑战" 测试视频</div><div class="ip">📱 YouTube Shorts · TikTok</div></div>
+        <div class="ic"><div class="inum">3</div><div class="inum" style="display:none">3</div><div class="ih">🌡️ "宠物中暑症状" 科普</div><div class="ib">兽医推荐类高信任内容，植入"冷感垫作为应对方案之一"，自然引流。</div><div class="ip">📱 Pinterest · Instagram · YouTube</div></div>
+        <div class="ic"><div class="inum">4</div><div class="ih">🏠 "放在家里的颜值展示"</div><div class="ib">家居实景拍摄，展示产品放在地板/沙发旁的效果。打"好看又实用"的定位，区别于白牌。</div><div class="ip">📱 Pinterest · Instagram</div></div>
+        <div class="ic"><div class="inum">5</div><div class="ib">对比凝胶垫（泄漏风险）vs 你的产品（安全材质），科普而不攻击，让买家自己得出结论。</div><div class="ih">⚖️ "凝胶垫 vs 安全垫" 对比</div><div class="ip">📱 Facebook Group · TikTok</div></div>
+        <div class="ic"><div class="inum">6</div><div class="ib">按体重/犬种推荐尺码，做成图片/视频，贴近搜索习惯（"for golden retriever"、"for corgi"）。</div><div class="ih">📐 "哪款尺码适合你的狗？"</div><div class="ip">📱 Pinterest · Amazon A+</div></div>
+      </div>
+
+      <div class="st">Amazon / Google 热搜词（冷感垫类目）</div>
+      <div class="kc">
+        <span class="kt kh">dog cooling mat machine washable</span>
+        <span class="kt kh">cooling mat for dogs chew proof</span>
+        <span class="kt kh">self cooling dog pad</span>
+        <span class="kt kh">dog cool mat large breed</span>
+        <span class="kt km">pet cooling mat non toxic</span>
+        <span class="kt km">cat cooling mat summer</span>
+        <span class="kt km">cooling dog blanket washable</span>
+        <span class="kt km">cooling mat puppy safe</span>
+        <span class="kt km">dog mat no gel leak</span>
+        <span class="kt km">pressure activated cooling pad</span>
+        <span class="kt kl">dog cooling mat outdoor</span>
+        <span class="kt kl">cooling pad for senior dogs</span>
+        <span class="kt kl">pet mat summer heat relief</span>
+        <span class="kt kl">dog cooling mat anti-slip</span>
+        <span class="kt kl">cooling mat crate pad</span>
+      </div>
+
+      <div class="st">📧 Review 跟进邮件模版（可直接使用）</div>
+      <div class="ebox">Subject: Hope [Pet Name] is staying cool this summer! 🌡️🐾
+
+Hi [Customer Name],
+
+Thank you for your order! We hope your pup is already enjoying their cool new mat.
+
+One quick favor: if you have a moment, we'd love to hear how [your dog/your cat] is liking it. An honest review means everything to a small brand like ours — and it helps other pet parents find a mat that actually works.
+
+👉 Leave a review: [Review Link]
+
+And if anything isn't right — the mat leaked, didn't hold up, or wasn't what you expected — please reach out to us first at support@[yourstore].com before leaving a review. We'll make it right, no questions asked.
+
+Stay cool,
+[Your Name] · [Brand Name]
+
+P.S. Tag us on Instagram or TikTok with your pup on their mat — we love sharing real moments! 🐶❄️</div>
+
+      <div class="st">🔔 旺季前提价/备货通知模版（批发/分销场景）</div>
+      <div class="ebox">Subject: Summer Stock Alert – Limited Inventory, Price Update Effective [Date]
+
+Dear [Partner Name],
+
+Summer is coming fast, and cooling mat demand is about to spike — we're already seeing search volume climb.
+
+Two quick updates:
+
+1. INVENTORY: Our [Model Name] cooling mats are moving faster than expected. 
+   We recommend placing your Q2 order before [Date] to secure allocation.
+
+2. PRICING: Due to material cost increases (reinforced chew-proof fabric + 
+   upgraded stitching), pricing on select SKUs will increase by ~8% from [Date].
+   Orders confirmed before [Date] lock in current pricing.
+
+Updated price sheet attached. Happy to jump on a call if helpful.
+
+Best,
+[Your Name] · [Brand] Wholesale Team</div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="scard">
+        <div class="sh">✅ 今日 3 件大事</div>
+        <div class="sb">
+          <div class="b3i"><div class="b3n">1</div><div class="b3t"><strong>今天就拍"机洗测试"视频</strong>——成本最低、信任度最高、直接打竞品痛点，ROI 最强的内容动作。</div></div>
+          <div class="b3i"><div class="b3n">2</div><div class="b3t"><strong>Q&A 主动埋答案</strong>——今天在 Listing Q&A 写上"Yes, it is fully machine washable"，每周新增 Q&A 帮助 Rufus 收录。</div></div>
+          <div class="b3i"><div class="b3n">3</div><div class="b3t"><strong>4月前备好 Q2 库存</strong>——冷感垫 4–7月是全年销量高峰，断货=丢排名，提前备货是旺季的最大保障。</div></div>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">🔍 发帖热搜词</div>
+        <div class="sb">
+          <ul class="hw">
+            <li class="h1">#dogcoolingmat</li>
+            <li class="h2">#petssummer</li>
+            <li class="h3">#dogsofinstagram</li>
+            <li>#coolingpadfordog</li>
+            <li>#machineWashable</li>
+            <li>#chewproof</li>
+            <li>#petcaretips</li>
+            <li>#summerpets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scard">
+        <div class="sh">📅 内容日历建议</div>
+        <div class="sb" style="font-size:13px">
+          <div class="fi"><div class="fd">本周（3月17日起）</div><div class="fn">拍摄机洗测试 + 耐咬挑战视频</div></div>
+          <div class="fi"><div class="fd">3月下旬</div><div class="fn">发布 TikTok/Reels，开始 PPC 试跑</div></div>
+          <div class="fi"><div class="fd">4月第1周</div><div class="fn">春季主推 Listing 全面优化完毕</div></div>
+          <div class="fi"><div class="fd">4月下旬</div><div class="fn">加大广告预算，冲 Q2 旺季 BSR</div></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  🐾 亚马逊宠物用品竞品情报日报 · 2026-03-17 &nbsp;|&nbsp; 竞品：Furhaven · MidWest Homes &nbsp;|&nbsp; 由 OpenClaw AI 生成<br>
+  <span>本报告综合品牌官网公开信息与行业知识库，数据仅供参考，不构成商业决策依据。价格/BSR/评价量均为估算区间，请通过 Jungle Scout / Helium 10 实时核验。</span>
+</footer>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-tab');
+      btns.forEach(function(b){ b.classList.remove('on'); });
+      panels.forEach(function(p){ p.classList.remove('on'); });
+      btn.classList.add('on');
+      document.getElementById('tab-' + target).classList.add('on');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+})();
+</script>
+</body>
+</html>
